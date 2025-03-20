@@ -33,7 +33,7 @@ public class CourseDaoImpl implements CourseDao {
             return ps;
         }, keyHolder);
 
-        // Handle null keys
+        // Handle null keys with exception
         Number key = keyHolder.getKey();
         if (key != null) {
             course.setCourseId(key.intValue());
